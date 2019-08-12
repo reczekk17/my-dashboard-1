@@ -118,6 +118,15 @@ body {
           box-sizing: border-box;
 }
 
+.news-section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.news-section::-webkit-scrollbar-thumb {
+  background: #f0efef;
+  border-radius: 10px;
+}
+
 .news-section .news-element {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,5 +164,89 @@ body {
 
 .news-section .news-element .content-wrapper {
   padding: 20px 40px 60px 40px;
+}
+
+.weather {
+  height: 40%;
+  width: 100%;
+  padding: 10px 10px 60px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  margin-left: 30px;
+}
+
+.weather::-webkit-scrollbar {
+  height: 10px;
+}
+
+.weather::-webkit-scrollbar-thumb {
+  background: #f0efef;
+  border-radius: 10px;
+}
+
+.weather .weather-day {
+  width: 500px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 30px 60px rgba(50, 50, 50, 0.2);
+          box-shadow: 0 30px 60px rgba(50, 50, 50, 0.2);
+  border-radius: 30px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.weather .weather-day img {
+  width: 100px;
+}
+
+.weather .weather-day .temperature {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.weather .weather-day .weather-description {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.weather .weather-day .day-name {
+  color: #777777;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.weather-wrapper .weather-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weather-wrapper .weather-tools .weather-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=styles.css.map */
