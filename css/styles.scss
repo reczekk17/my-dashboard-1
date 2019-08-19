@@ -54,6 +54,7 @@ body {
 
   .content {
     width: 90%;
+    overflow: hidden;
 
     .header {
       display: flex;
@@ -68,10 +69,13 @@ body {
       }
 
       &__tools {
-        .search-btn,
-        .settings-btn {
+        button {
           background: none;
+          box-shadow: none;
           border: none;
+          &:after {
+            display: none;
+          }
           padding: 10px;
           font-size: 1.6rem;
 
@@ -106,3 +110,39 @@ body {
 
 @import "./news";
 @import "./weather";
+@import "./tools";
+
+button {
+  padding: 15px 40px;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  margin: 0 5px;
+
+  &:hover {
+    background: $blue;
+    color: white;
+
+    &:after {
+      background: white;
+      box-shadow: 0 0 10px rgba(white, 1);
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 3px;
+    bottom: 0;
+    left: calc(50% - 5px);
+    background: $blue;
+    box-shadow: 0 0 10px rgba($blue, 1);
+    position: absolute;
+  }
+}

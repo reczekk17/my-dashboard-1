@@ -56,7 +56,22 @@
 .weather-wrapper {
   .weather-tools {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+
+    .header {
+      font-size: 1.4rem;
+      padding: 0 2rem;
+
+      .header-title {
+        font-weight: bold;
+        margin-right: 1rem;
+        color: $blue;
+      }
+
+      .header-date {
+        color: #999999;
+      }
+    }
 
     .weather-buttons {
       display: flex;
