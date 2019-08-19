@@ -413,4 +413,8 @@ button:after {
           box-shadow: 0 0 10px #0072f4;
   position: absolute;
 }
+
+.preloader {
+  width: 128px;
+}
 /*# sourceMappingURL=styles.css.map */
