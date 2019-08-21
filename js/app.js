@@ -8,13 +8,13 @@ fetch('https://it-academy-api.000webhostapp.com/?rest_route=/myplugin/v1/news/')
   })
   .then(res => {
     prelaoder.style.display = 'none';
-    createNewsElement(res);
+    createNewsElements(res);
   })
   .catch(err => {
     console.log('Error: ', err);
   });
 
-const createNewsElement = newsData => {
+const createNewsElements = newsData => {
   newsData.forEach(element => {
     const newsElement = document.createElement('div');
     newsElement.classList.add('news-element');
