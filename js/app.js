@@ -62,3 +62,17 @@ const createNewsElement = newsData => {
     newsSection.appendChild(newsElement);
   });
 };
+
+const currentTime = document.querySelector('.current-time');
+const city = document.querySelector('.city');
+
+setInterval(() => {
+  const today = new Date();
+  const time =
+    `${today.getHours()}`.padStart(2, 0) +
+    ':' +
+    `${today.getMinutes()}`.padStart(2, 0) +
+    ':' +
+    `${today.getSeconds()}`.padStart(2, 0);
+  currentTime.innerHTML = time;
+}, 1000);
