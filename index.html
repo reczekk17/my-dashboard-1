@@ -90,9 +90,18 @@
             <div class="tools">
               <div class="time">
                 <div class="switches time__switches">
-                  <button>Cracow</button>
-                  <button>London</button>
-                  <button>New York</button>
+                  <button class="clock-button" onclick="setTimeZone('Krakow')">
+                    Cracow
+                  </button>
+                  <button class="clock-button" onclick="setTimeZone('London')">
+                    London
+                  </button>
+                  <button
+                    class="clock-button"
+                    onclick="setTimeZone('New York')"
+                  >
+                    New York
+                  </button>
                 </div>
                 <div class="card time__display">
                   <span class="time-title">Current time</span>

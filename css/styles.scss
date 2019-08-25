@@ -102,7 +102,8 @@ button {
   font-weight: bold;
   color: #444;
 
-  &:hover {
+  &:hover,
+  &.btn-active {
     background: $blue;
     background-image: linear-gradient(
       0deg,

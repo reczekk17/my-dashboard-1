@@ -1,6 +1,7 @@
 const prelaoder = document.querySelector('.preloader');
 const newsSection = document.querySelector('.news-section');
 const placeholder = 'images/placeholder.png';
+let timezone = 'Krakow';
 
 fetch('https://it-academy-api.000webhostapp.com/?rest_route=/myplugin/v1/news/')
   .then(res => {
@@ -63,16 +64,46 @@ const createNewsElements = newsData => {
   });
 };
 
-const currentTime = document.querySelector('.current-time');
-const city = document.querySelector('.city');
+const setTimeZone = zone => {
+  timezone = zone;
+};
 
-setInterval(() => {
+const timezoneOffset = (time, timezone) => {
+  switch (timezone) {
+    case 'Krakow':
+      return time + 0;
+    case 'London':
+      return time - 1 * 60 * 60 * 1000;
+    case 'New York':
+      return time - 6 * 60 * 60 * 1000;
+    default:
+      return time;
+  }
+};
+
+const startTime = () => {
   const today = new Date();
-  const time =
-    `${today.getHours()}`.padStart(2, 0) +
-    ':' +
-    `${today.getMinutes()}`.padStart(2, 0) +
-    ':' +
-    `${today.getSeconds()}`.padStart(2, 0);
-  currentTime.innerHTML = time;
-}, 1000);
+  today.setTime(timezoneOffset(today.getTime(), timezone));
+
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+
+  h = checkTime(h);
+  m = checkTime(m);
+  s = checkTime(s);
+
+  document.querySelector('.current-time').innerHTML = h + ':' + m + ':' + s;
+  document.querySelector('.city').textContent = timezone;
+
+  setTimeout(startTime, 500);
+};
+
+function checkTime(i) {
+  if (i < 10) {
+    i = '0' + i;
+  }
+  return i;
+}
+
+startTime();
