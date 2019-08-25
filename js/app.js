@@ -121,3 +121,15 @@ const switchNews = id => {
 };
 
 switchNews('sky-news');
+
+/// Light / Dark
+
+const setTheme = theme => {
+  const app = document.querySelector('.app');
+
+  if (theme === 'dark' && !app.classList.contains('dark')) {
+    app.classList.add('dark');
+  } else {
+    app.classList.remove('dark');
+  }
+};

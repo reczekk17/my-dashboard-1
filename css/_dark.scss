@@ -1,0 +1,126 @@
+.app.dark {
+  background-color: #222;
+
+  button {
+    background-color: #333;
+    background-image: linear-gradient(
+      0deg,
+      rgba(black, 0.3) 0%,
+      rgba(#444444, 1) 100%
+    );
+    color: white;
+
+    &:hover {
+      background: $blue;
+      box-shadow: 0 10px 10px rgba($blue, 0.3);
+      background-image: linear-gradient(
+        0deg,
+        rgba(black, 0.1) 0%,
+        rgba($blue, 0) 100%
+      );
+    }
+  }
+
+  .content .header h1 {
+    color: white;
+  }
+
+  .weather-wrapper {
+    .weather-tools {
+      &__header {
+        .header-title {
+          color: white;
+        }
+        .header-date {
+          color: #ddd;
+        }
+      }
+    }
+
+    .weather {
+      &::-webkit-scrollbar-thumb {
+        background: #444;
+      }
+      .weather-day {
+        background-color: #444;
+
+        .day-name,
+        .weather-description,
+        .temperature {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .clear {
+    background-image: linear-gradient(
+      0,
+      rgba(255, 145, 0, 0.4) 0%,
+      rgba(100, 100, 100, 0) 25%,
+      rgba(100, 100, 100, 0) 100%
+    );
+    border-bottom: 3px solid rgb(255, 145, 0);
+  }
+
+  .rain {
+    background-image: linear-gradient(
+      0,
+      rgba(48, 71, 202, 0.4) 0%,
+      rgba(100, 100, 100, 0) 25%,
+      rgba(100, 100, 100, 0) 100%
+    );
+    border-bottom: 3px solid rgb(48, 71, 202);
+  }
+
+  .clouds {
+    background-image: linear-gradient(
+      0,
+      rgba(102, 102, 102, 0.4) 0%,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-bottom: 3px solid rgb(110, 110, 110);
+  }
+
+  .news-section {
+    &::-webkit-scrollbar-thumb {
+      background: #444;
+    }
+
+    .news-element {
+      &__description {
+        color: #b3b3b3;
+      }
+
+      .news-element-title {
+        color: rgb(221, 221, 221);
+      }
+
+      .author {
+        color: #b3b3b3;
+      }
+    }
+  }
+
+  .time {
+    &__display {
+      background-color: #444;
+
+      .time-title,
+      .city {
+        color: rgb(202, 202, 202);
+      }
+
+      .current-time {
+        color: white;
+      }
+    }
+  }
+
+  .live {
+    &__video {
+      background-color: #444;
+    }
+  }
+}
