@@ -508,20 +508,20 @@ body {
 }
 
 .tools .time__display .time-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
   color: #666666;
   position: relative;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .tools .time__display .current-time {
-  font-size: 5rem;
-  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
   z-index: 2;
 }
 
 .tools .time__display .city {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #666666;
   z-index: 2;
 }
