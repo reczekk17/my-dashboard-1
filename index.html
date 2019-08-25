@@ -112,12 +112,22 @@
               </div>
               <div class="live">
                 <div class="switches live__switches">
-                  <button>CNN</button>
-                  <button>BBC</button>
+                  <button onclick="switchNews('sky-news')">Sky News</button>
+                  <button onclick="switchNews('euro-news')">Euronews</button>
                 </div>
                 <iframe
+                  id="sky-news"
                   class="card live__video"
-                  src="https://www.youtube.com/embed/ri6NE6BulDY"
+                  src="https://www.youtube.com/embed/siyW0GOBtbo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+
+                <iframe
+                  id="euro-news"
+                  class="card live__video"
+                  src="https://www.youtube.com/embed/M2MueMyzZBY"
                   frameborder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen

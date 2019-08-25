@@ -107,3 +107,17 @@ function checkTime(i) {
 }
 
 startTime();
+
+const news = document.querySelectorAll('.live__video');
+
+const switchNews = id => {
+  news.forEach(newsBlock => {
+    newsBlock.style.display = 'none';
+
+    if (newsBlock.id === id) {
+      newsBlock.style.display = 'block';
+    }
+  });
+};
+
+switchNews('sky-news');
